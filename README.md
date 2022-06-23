@@ -81,21 +81,23 @@ export default class CustomApi {
 ```
 
 ## AxiosEngine 属性
-| 属性名 | 类型 | 说明                                                                   | 默认值 |
-| --- | --- |----------------------------------------------------------------------| --- |
-| baseURL | String | 相对于 `url` 的路径 | -
-| urlPrefix | String | 相对于 `url` 的路径 | -
-| headers | Object | 自定义请求头                                                               | {}
-| timeout | Number | 如果请求时间超过 `timeout` 的值，则请求会被中断，`0` 永不超时，单位：毫秒                         | 60000
-| responseType | String | 浏览器将要响应的数据类型，可选值包括: `arraybuffer` `document` `json` `text` `stream` `blob` | json
+
+| 属性名          | 类型     | 说明                                                                         | 默认值   |
+|--------------|--------|----------------------------------------------------------------------------|-------|
+| baseURL      | String | 相对于 `url` 的路径                                                              | -     |
+| urlPrefix    | String | 相对于 `url` 的路径                                                              | -     |
+| headers      | Object | 自定义请求头                                                                     | {}    |
+| timeout      | Number | 如果请求时间超过 `timeout` 的值，则请求会被中断，`0` 永不超时，单位：毫秒                               | 60000 |
+| responseType | String | 浏览器将要响应的数据类型，可选值包括: `arraybuffer` `document` `json` `text` `stream` `blob` | json  |
 
 ## AxiosEngine 方法
-| 方法名                                                                                                                                            | 说明 | 参数说明 |
-|------------------------------------------------------------------------------------------------------------------------------------------------| --- | --- |
-| get(url: String, { params?: Object, headers?: Object, responseType?: String }): Promise                                                        | GET请求
-| delete(url: String, { params?: Object, headers?: Object, responseType?: String }): Promise                                                     | DELETE请求
-| post(url: String, { params?: Object, headers?: Object, responseType?: String, data?: any }): Promise                                           | POST请求
-| put(url: String, { params?: Object, headers?: Object, responseType?: String, data?: any }): Promise                                            | PUT请求
-| patch(url: String, { params?: Object, headers?: Object, responseType?: String, data?: any }): Promise                                          | PATCH请求
-| addInterceptor(type: String, key: String, [onFulfilled?: (value: any) => value, onRejected?: (error: any) => error]): void | 添加拦截器 | 参数`type`可选值为 `request` `response`，不区分大小写
-| removeInterceptor(type: String, key: String): void                                                                                             | 移除拦截器 | 参数`type`可选值为 `request` `response`，不区分大小写
+
+| 方法名                                                                                                                        | 参数说明                                     | 说明       |
+|----------------------------------------------------------------------------------------------------------------------------|------------------------------------------|----------|
+| get(url: String, { params?: Object, headers?: Object, responseType?: String }): Promise                                    |                                          | GET请求    |
+| delete(url: String, { params?: Object, headers?: Object, responseType?: String }): Promise                                 |                                          | DELETE请求 |                                 
+| post(url: String, { params?: Object, headers?: Object, responseType?: String, data?: any }): Promise                       |                                          | POST请求   |                                   
+| put(url: String, { params?: Object, headers?: Object, responseType?: String, data?: any }): Promise                        |                                          | PUT请求    |
+| patch(url: String, { params?: Object, headers?: Object, responseType?: String, data?: any }): Promise                      |                                          | PATCH请求  |  
+| addInterceptor(type: String, key: String, [onFulfilled?: (value: any) => value, onRejected?: (error: any) => error]): void | 参数`type`可选值为 `request` `response`，不区分大小写 | 添加拦截器    |
+| removeInterceptor(type: String, key: String): void                                                                         | 参数`type`可选值为 `request` `response`，不区分大小写 | 移除拦截器    |    
