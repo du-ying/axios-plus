@@ -2,9 +2,9 @@
   "name": "axios-plus",
   "version": "1.0.0",
   "description": "axios扩展类",
-  "main": "index.js",
+  "main": "axios-plus.min.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "node build"
   },
   "repository": {
     "type": "git",
@@ -27,5 +27,10 @@
   "dependencies": {
     "axios": "^0.27.2",
     "qs": "^6.10.5"
+  },
+  "devDependencies": {
+    "rollup": "^2.75.7",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }
