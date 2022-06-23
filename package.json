@@ -1,5 +1,5 @@
 {
-  "name": "axios-plus",
+  "name": "@duying/axios-plus",
   "version": "1.0.0",
   "description": "axios扩展类",
   "main": "axios-plus.min.js",
