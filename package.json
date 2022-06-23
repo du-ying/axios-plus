@@ -1,0 +1,31 @@
+{
+  "name": "axios-plus",
+  "version": "1.0.0",
+  "description": "axios扩展类",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/du-ying/axios-plus.git"
+  },
+  "keywords": [
+    "axios",
+    "http",
+    "ajax",
+    "xhr",
+    "promise",
+    "node"
+  ],
+  "author": "du-ying",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/du-ying/axios-plus/issues"
+  },
+  "homepage": "https://github.com/du-ying/axios-plus#readme",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "qs": "^6.10.5"
+  }
+}
