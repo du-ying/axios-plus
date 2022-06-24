@@ -8,9 +8,9 @@ npm install @duying/axios-plus
 ## 示例
 #### Http.js文件
 ```javascript
-import AxiosEngine from '@duying/axios-plus'
+import AxiosPlus from '@duying/axios-plus'
 
-export default class Http extends AxiosEngine {
+export default class Http extends AxiosPlus {
   baseURL = 'https://some-domain.com/api'
 
   urlPrefix = '/a'

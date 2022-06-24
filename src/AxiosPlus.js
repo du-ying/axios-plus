@@ -1,7 +1,7 @@
 import axios from 'axios'
 import qs from 'qs'
 
-export default class AxiosEngine {
+export default class AxiosPlus {
   baseURL = ''
 
   urlPrefix = ''
