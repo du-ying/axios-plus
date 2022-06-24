@@ -1,10 +1,11 @@
 {
   "name": "@duying/axios-plus",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "axios扩展类",
   "main": "axios-plus.min.js",
   "scripts": {
-    "build": "babel src/AxiosEngine.js --out-file axios-plus.min.js"
+    "build": "babel src/AxiosEngine.js --out-file axios-plus.min.js",
+    "test": "babel test --out-dir text-babel"
   },
   "repository": {
     "type": "git",
@@ -26,11 +27,14 @@
   "homepage": "https://github.com/du-ying/axios-plus#readme",
   "dependencies": {
     "axios": "^0.27.2",
+    "core-js": "^3.23.2",
     "qs": "^6.10.5"
   },
   "devDependencies": {
     "@babel/cli": "^7.17.10",
     "@babel/core": "^7.18.5",
-    "@babel/preset-env": "^7.18.2"
+    "@babel/plugin-transform-runtime": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "@babel/runtime": "^7.18.3"
   }
 }

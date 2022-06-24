@@ -13,7 +13,9 @@ package-lock.json
 coverage
 
 # dev
+src
 test
+test-bable
 types
 build
 babel.config.js
