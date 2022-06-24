@@ -1,30 +1,4 @@
-# OSX
-.DS_Store
-
-# IDE
-.idea
-
-# npm
-node_modules
-yarn.lock
+.*
+*.md
+node_modules/
 package-lock.json
-
-# jest
-coverage
-
-# dev
-test
-types
-build
-babel.config.js
-prettier.config.js
-.eslintrc.json
-
-#doc
-CONTRIBUTING.md
-docs
-
-#other
-.travis.yml
-karma.sauce.conf.js
-.github
