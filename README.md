@@ -30,12 +30,12 @@ export default class Http extends AxiosPlus {
     this.addInterceptor('request', 'key1', [
       function (config) {
         // 在发送请求之前做些什么
-        // this 关键字为 AxiosEngine 实例
+        // this 关键字为 AxiosPlus 实例
         return config
       },
       function (error) {
         // 对请求错误做些什么
-        // this 关键字为 AxiosEngine 实例
+        // this 关键字为 AxiosPlus 实例
         return Promise.reject(error)
       }
     ])
@@ -44,13 +44,13 @@ export default class Http extends AxiosPlus {
       function (response) {
         // 2xx 范围内的状态码都会触发该函数
         // 对响应数据做点什么
-        // this 关键字为 AxiosEngine 实例
+        // this 关键字为 AxiosPlus 实例
         return response
       },
       function (error) {
         // 超出 2xx 范围的状态码都会触发该函数
         // 对响应错误做点什么
-        // this 关键字为 AxiosEngine 实例
+        // this 关键字为 AxiosPlus 实例
         return Promise.reject(error)
       }
     ])
