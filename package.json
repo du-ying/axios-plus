@@ -1,5 +1,5 @@
 {
-  "name": "@duying/axios-plus",
+  "name": "@dy.ing/axios-plus",
   "version": "1.8.3",
   "description": "axios扩展类",
   "main": "src/AxiosPlus.js",
@@ -36,5 +36,8 @@
     "@babel/preset-env": "^7.26.9",
     "babel-jest": "^29.7.0",
     "jest": "^29.7.0"
+  },
+  "directories": {
+    "example": "examples"
   }
 }
