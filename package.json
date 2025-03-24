@@ -1,5 +1,5 @@
 {
-  "name": "@dy.ing/axios-plus",
+  "name": "@dy2019/axios-plus",
   "version": "1.8.3",
   "description": "axios扩展类",
   "main": "src/AxiosPlus.js",
