@@ -2,13 +2,13 @@
 
 ## 安装
 ```
-npm install @duying/axios-plus
+npm install @dy2019/axios-plus
 ```
 
 ## 示例
 #### Http.js文件
 ```javascript
-import AxiosPlus from '@duying/axios-plus'
+import AxiosPlus from '@dy2019/axios-plus'
 
 export default class Http extends AxiosPlus {
   baseURL = 'https://some-domain.com/api'
