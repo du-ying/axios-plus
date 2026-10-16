@@ -1,7 +1,16 @@
-import axios, {AxiosRequestConfig, AxiosResponse, Method} from 'axios';
+import axios, {
+  AxiosRequestConfig,
+  AxiosResponse,
+  Method,
+  AxiosHeaders,
+  toFormData,
+  formToJSON,
+  mergeConfig,
+  HttpStatusCode,
+} from 'axios';
 import qs from 'qs';
 
-export default class AxiosPlus {
+export class AxiosPlus {
   baseURL = '';
 
   urlPrefix = '';
@@ -54,11 +63,11 @@ export default class AxiosPlus {
   /**
    * @description 发起 HTTP 请求的主方法
    * @param url {string}
-   * @param method {Method} 使用的 HTTP 方法
+   * @param method {Method} 使用的 HTTP 方法，默认为 GET
    * @param config {AxiosRequestConfig}
    * @return {Promise<AxiosResponse>}
    * */
-  request(url, method, config) {
+  request(url, method = 'GET', config = {}) {
     return this.#init().request({
       url: this.urlPrefix + url,
       method,
@@ -152,11 +161,15 @@ export default class AxiosPlus {
 
   /**
    * @description 返回给定配置在不实际发起请求的情况下会发送的 URL
+   * @param url {string}
    * @param config {AxiosRequestConfig}
    * @return {string}
    * */
-  getUri(config = {}) {
-    return this.#init().getUri(config);
+  getUri(url, config = {}) {
+    return this.#init().getUri({
+      url: this.urlPrefix + url,
+      ...config,
+    });
   }
 
   /**
@@ -192,3 +205,5 @@ export default class AxiosPlus {
     return this.#init().patchForm(this.urlPrefix + url, data, config);
   }
 }
+
+export { AxiosHeaders, toFormData, formToJSON, mergeConfig, HttpStatusCode };
